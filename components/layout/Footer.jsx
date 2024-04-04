@@ -8,7 +8,9 @@ const Footer = () => {
   useEffect(() => {
     const getFooter = async () => {
       try {
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/footer/660d5c7723ee83b27d08e204`);
+        const res = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_URL}/footer/660d5c7723ee83b27d08e204`
+        );
         setFooter(res.data);
       } catch (err) {
         console.log(err);
@@ -16,6 +18,7 @@ const Footer = () => {
     };
     getFooter();
   }, []);
+
   return (
     <div className="bg-secondary text-white">
       <div className="container mx-auto pt-16 pb-6">
@@ -40,13 +43,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:flex-1">
-            <Title addClass="text-[38px]">Feane</Title>
+            <Title addClass="text-[38px]">Crunch</Title>
             <p className="mt-3">{footer?.desc}</p>
             <div className="flex items-center justify-center mt-5 gap-x-2">
               {footer?.socialMedia?.map((item) => (
                 <a
                   href={item?.link}
-                  className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full"
+                  className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full hover:text-white hover:bg-primary transition-all"
                   key={item._id}
                   target="_blank"
                   rel="noreferrer"
@@ -73,7 +76,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="text-center mt-10">
-          © 2024 All Rights Reserved By Free Html Templates
+          © 2024 All Rights Reserved By Hakan Sayar
         </p>
       </div>
     </div>

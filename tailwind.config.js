@@ -22,7 +22,7 @@ module.exports = {
         danger: "#ff0000",
       },
       fontFamily: {
-        dancing: ["Dancing Script", "cursive"],
+        kalam: ['Kalam', 'sans-serif'],
         sans: ["Open Sans", "sans-serif"],
       },
     },
